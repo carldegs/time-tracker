@@ -1,0 +1,180 @@
+$background-color: #263341;
+$primary-text-color: #f1f7fc;
+$secondary-text-color: #515d6b;
+$purple: #684aff;
+$blue: #44d3c3;
+$red: #fb4a71;
+
+.tracker-page {
+    background-color: $background-color;
+    height: 100vh;
+    padding: 0 32px;
+
+    .stop-header {
+        padding: 32px 0;
+        
+        .next-stop {
+            font-size: 1.25em;
+            color: $secondary-text-color;
+        }
+
+        .stop-select {
+            .curr {
+                font-size: 1.75em;
+                color: $primary-text-color;
+                border-bottom: 1px dotted $secondary-text-color;
+                padding-bottom: 4px;
+
+                &.disabled {
+                    border-bottom: none;
+                }
+            }
+
+            .options {
+                background-color: $purple;
+                color: $primary-text-color;
+                font-size: 1em;
+                border-radius: 8px;
+                padding: 4px 12px;
+                margin-top: 4px;
+                width: fit-content;
+                position: absolute;
+
+                .option {
+                    padding: 8px 0;
+                    width: fit-content;
+                    margin-right: 14px;
+                    margin-left: 6px;
+                }
+
+                .divider {
+                    width: 100%;
+                    height: 1px;
+                    background-color: $primary-text-color;
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+
+    .option-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 8px 0 32px 0;
+
+        .arrived-button {
+            width: 125px;
+            height: 125px;
+            min-width: 60px;
+            min-height: 60px;
+            border-radius: 125px;
+            background-color: $blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            span {
+                color: $primary-text-color;
+                font-size: 1.25em
+            }
+        }
+
+        .transport-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 23px;
+            margin-bottom: 23px;
+
+            .transport-option {
+                width: 80px;
+                height: 80px;
+                min-width: 40px;
+                min-height: 40px;
+                border-radius: 80px;
+                background-color: $red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                img {
+                    filter: invert(1);
+                }
+                
+                span {
+                    color: $primary-text-color;
+                    font-size: 1.25em
+                }
+            }
+        }
+    }
+
+    .arrival-departure {
+        display: flex;
+        flex-direction: row;
+        margin: 16px -8px 0 -8px;
+        
+        .card {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin: 0 8px;
+        }
+    }
+
+    .time-table {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 6px;
+
+            &.header {
+                color: $secondary-text-color;
+            }
+
+            .col {
+                flex-grow: 1;
+                flex-basis: 0;
+            }
+        }
+    }
+
+    .card {
+        color: $primary-text-color;
+        border: 1px solid #344557;
+        border-radius: 8px;
+        padding: 12px 20px;
+
+        .timer {
+            font-size: 1.25em;
+
+            &.large {
+                font-size: 2em;
+            }
+        }
+
+        .card-title {
+            font-size: 1em;
+            color: $secondary-text-color;
+
+            &.large {
+                font-size: 1.25em;
+            }
+        }
+    } 
+
+    .undo-button {
+        filter: invert(1);
+        position: absolute;
+        margin-top: 4px;
+        right: 34px;
+        opacity: 0.7;
+    }
+}
